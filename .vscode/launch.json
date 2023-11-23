@@ -1,0 +1,72 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Launch Patient",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_patient.dart",
+            "args": [
+                "--flavor",
+                "patient",
+                "--target",
+                "lib/main_patient.dart",
+            ],
+        },
+        {
+            "name": "Launch Patient Web",
+            "program": "lib/main_patient.dart",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--web-port=5000",
+                "--web-enable-expression-evaluation",
+                "--flavor",
+                "patient",
+                "--target",
+                "lib/main_patient.dart",
+                "--web-renderer",
+                "html",
+            ],
+        },
+        {
+            "name": "Launch Practitioner",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_practitioner.dart",
+            "args": [
+                "--flavor",
+                "practitioner",
+                "--target",
+                "lib/main_practitioner.dart",
+            ],
+        },
+        {
+            "name": "Launch Practitioner Web",
+            "program": "lib/main_practitioner.dart",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--web-port=5000",
+                "--web-enable-expression-evaluation",
+                "--flavor",
+                "practitioner",
+                "--target",
+                "lib/main_practitioner.dart",
+                "--web-renderer",
+                "html",
+            ],
+        },
+    ]
+}
